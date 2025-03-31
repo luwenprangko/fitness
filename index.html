@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
+  <body>
+    <div class="h-screen flex flex-col">
+      <main class="flex-1 overflow-y-auto">
+        <section id="tab-1-content" class="hidden">
+          <!-- content for tab 1 -->
+          <h2>Tab 1 Content</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+            amet nulla auctor, vestibulum magna sed, convallis ex.
+          </p>
+        </section>
+        <section id="tab-2-content" class="hidden">
+          <!-- content for tab 2 -->
+          <h2>Tab 2 Content</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+            amet nulla auctor, vestibulum magna sed, convallis ex.
+          </p>
+        </section>
+        <section id="tab-3-content" class="hidden">
+          <!-- content for tab 3 -->
+          <h2>Tab 3 Content</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+            amet nulla auctor, vestibulum magna sed, convallis ex.
+          </p>
+        </section>
+      </main>
+      <nav class="bg-white border-t border-gray-200 p-4 flex justify-around">
+        <button
+          class="bg-white border-none py-2 px-4 text-lg cursor-pointer hover:bg-gray-100"
+          data-tab="tab-1">
+          Tab 1
+        </button>
+        <button
+          class="bg-white border-none py-2 px-4 text-lg cursor-pointer hover:bg-gray-100"
+          data-tab="tab-2">
+          Tab 2
+        </button>
+        <button
+          class="bg-white border-none py-2 px-4 text-lg cursor-pointer hover:bg-gray-100"
+          data-tab="tab-3">
+          Tab 3
+        </button>
+      </nav>
+    </div>
+    <!-- partials -->
+    <script src="script.js"></script>
+  </body>
+</html>
