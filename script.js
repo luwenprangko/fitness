@@ -11,6 +11,14 @@ tabs.forEach((tab) => {
         content.classList.add("hidden");
       }
     });
+
+    // for custom tab-2-item
+    if (tabId === "tab-2") {
+      document.getElementById("tab-2-item").classList.remove("hidden");
+    } else {
+      document.getElementById("tab-2-item").classList.add("hidden");
+    }
+    // end for custom tab-2-item
   });
 });
 
