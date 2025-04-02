@@ -1,140 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- tailwind -->
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- chart -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-  </head>
-  <body>
-    <div class="h-screen">
-      <main class="overflow-y-auto pb-[90px]">
-        <section id="tab-1-content" class="hidden">
-          <!-- content for tab 1 -->
-          <h2>Tab 1 Content</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet nulla auctor, vestibulum magna sed, convallis ex.
-          </p>
-        </section>
-        <section id="tab-2-content" class="hidden">
-          <!-- content for tab 2 -->
-          <h2>Tab 2 Content</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet nulla auctor, vestibulum magna sed, convallis ex.
-          </p>
-        </section>
-        <section id="tab-3-content" class="hidden">
-          <!-- content for tab 3 -->
-          <h2>Tab 3 Content</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-            amet nulla auctor, vestibulum magna sed, convallis ex.
-          </p>
-        </section>
-      </main>
-      <nav
-        class="fixed bottom-0 left-0 right-0 bg-zinc-900 border border-gray-200 p-3 m-3 rounded-[1rem]">
-        <div class="text-white" id="tab-2-item">
-          <div class="space-y-2">
-            <div
-              class="bg-orange-500 w-full p-5 rounded-lg flex items-center justify-between text-2xl font-extrabold">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32px"
-                height="32px"
-                viewBox="0 0 256 256">
-                <path
-                  fill="currentColor"
-                  d="m232.94 163.06l-28.62-14.31A43.78 43.78 0 0 1 180 109.39V80a12 12 0 0 0-12-12a44.05 44.05 0 0 1-44-44a12 12 0 0 0-19.25-9.56l-77 58.41l-.3.23a20 20 0 0 0-1.56 29.69l113.68 113.72a12 12 0 0 0 8.49 3.51H224a20 20 0 0 0 20-20v-19.06a19.88 19.88 0 0 0-11.06-17.88M220 196h-67L46.08 89.05l12.86-9.76l41.2 41.2a12 12 0 0 0 17-17L78.25 64.65l25.24-19.14A68.24 68.24 0 0 0 156 90.94v18.45a67.62 67.62 0 0 0 37.59 60.82L220 183.42ZM55.49 184H32a12 12 0 0 1 0-24h23.49a12 12 0 0 1 0 24m48 24a12 12 0 0 1-12 12H48a12 12 0 0 1 0-24h43.49a12 12 0 0 1 12 12" />
-              </svg>
-              <span id="steps" class="flex-1 text-center">15000</span>
-            </div>
-            <div class="flex gap-2">
-              <div
-                class="bg-zinc-800 w-full p-5 rounded-lg flex items-center justify-between gap-2 text-mdl font-extrabold">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32px"
-                  height="32px"
-                  viewBox="0 0 256 256">
-                  <path
-                    fill="currentColor"
-                    d="M232 204h-15.47L157.2 33.43A20 20 0 0 0 138.31 20h-20.62A20 20 0 0 0 98.8 33.43L39.47 204H24a12 12 0 0 0 0 24h208a12 12 0 0 0 0-24M98.27 108h59.46l13.91 40H84.36Zm22.26-64h14.94l13.91 40h-42.76ZM76 172h104l11.13 32H64.88Z" />
-                </svg>
-                <span class="flex-1 text-center">10KM</span>
-              </div>
-              <div
-                class="bg-zinc-800 w-full p-5 rounded-lg flex items-center justify-between gap-2 text-mdl font-extrabold">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32px"
-                  height="32px"
-                  viewBox="0 0 256 256">
-                  <path
-                    fill="currentColor"
-                    d="M128 44a96 96 0 1 0 96 96a96.11 96.11 0 0 0-96-96m0 168a72 72 0 1 1 72-72a72.08 72.08 0 0 1-72 72m36.49-112.49a12 12 0 0 1 0 17l-28 28a12 12 0 0 1-17-17l28-28a12 12 0 0 1 17 0M92 16a12 12 0 0 1 12-12h48a12 12 0 0 1 0 24h-48a12 12 0 0 1-12-12" />
-                </svg>
-                <span id="time" class="flex-1 text-center">1:20:50</span>
-              </div>
-            </div>
-            <button
-              class="w-full bg-green-600 p-1 text-white rounded-md"
-              type="button">
-              Start
-            </button>
-          </div>
-        </div>
-        <div class="flex justify-around">
-          <button
-            class="text-white border-none py-2 px-4 text-lg cursor-pointer"
-            data-tab="tab-1">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32px"
-              height="32px"
-              viewBox="0 0 256 256">
-              <path
-                fill="currentColor"
-                d="M241.47 30.53a36 36 0 0 0-50.92 0a36.06 36.06 0 0 0-1.2 49.66l-23.83 44.26a36.1 36.1 0 0 0-21 3.07l-16-16a36 36 0 0 0-57.94-41a36 36 0 0 0-1.2 49.66L45.5 164.45a36 36 0 0 0-31 10.1a36 36 0 1 0 52.12 1.26l23.83-44.26A35 35 0 0 0 96 132a36.1 36.1 0 0 0 15.51-3.5l16 16a36 36 0 1 0 59.14-8.68l23.85-44.27a36 36 0 0 0 5.5.45a36 36 0 0 0 25.46-61.45Zm-154 57a12 12 0 0 1 17 17a12 12 0 0 1-17-17m-39 121a12 12 0 1 1 0-17a12 12 0 0 1 0 16.97Zm120-40a12 12 0 1 1 0-17a12 12 0 0 1 .02 16.96Zm56-104a12 12 0 1 1 0-17a12 12 0 0 1 .03 16.95Z" />
-            </svg>
-          </button>
-          <button
-            class="text-white border-none py-2 px-4 text-lg cursor-pointer"
-            data-tab="tab-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32px"
-              height="32px"
-              viewBox="0 0 256 256">
-              <path
-                fill="currentColor"
-                d="M152 92a36 36 0 1 0-36-36a36 36 0 0 0 36 36m0-48a12 12 0 1 1-12 12a12 12 0 0 1 12-12m76 93.4a12 12 0 0 1-7 10.91a66 66 0 0 1-21.47 3.78c-14 0-34.25-3.82-59.77-19a177 177 0 0 1-10.27 21C153.12 162.83 188 183.8 188 232a12 12 0 0 1-24 0c0-18.69-6.95-33.06-21.26-43.94c-9.16-7-19.55-11-27.43-13.34c-.81 1-1.64 2-2.5 2.95c-20 22.87-44.82 34.76-72.25 34.76a97 97 0 0 1-9.75-.49a12 12 0 1 1 2.39-23.88c52.3 5.22 77.48-45.92 85.79-67.75c-34.19-17.85-55.25-1.53-55.48-1.31a12 12 0 0 1-15-18.72C50.08 99 88 69.44 142.75 106.62c43.1 29.31 68.1 19.92 68.5 19.76a12 12 0 0 1 16.75 11Z" />
-            </svg>
-          </button>
-          <button
-            class="text-white border-none py-2 px-4 text-lg cursor-pointer"
-            data-tab="tab-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32px"
-              height="32px"
-              viewBox="0 0 256 256">
-              <path
-                fill="currentColor"
-                d="M128 20a108 108 0 1 0 108 108A108.12 108.12 0 0 0 128 20M79.57 196.57a60 60 0 0 1 96.86 0a83.72 83.72 0 0 1-96.86 0M100 120a28 28 0 1 1 28 28a28 28 0 0 1-28-28m94 59.94a83.5 83.5 0 0 0-29-23.42a52 52 0 1 0-74 0a83.5 83.5 0 0 0-29 23.42a84 84 0 1 1 131.9 0Z" />
-            </svg>
-          </button>
-        </div>
-      </nav>
-    </div>
-    <!-- partials -->
-    <script src="script.js"></script>
-    <script src="component.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- tailwind -->
+		<link rel="stylesheet" href="styles.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<!-- chart -->
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	</head>
+	<body>
+		<div class="h-screen">
+			<main class="overflow-y-auto pb-[90px]">
+				<section id="tab-1-content" class="hidden">
+					<!-- content for tab 1 -->
+					<h2>Tab 1 Content</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+						amet nulla auctor, vestibulum magna sed, convallis ex.
+					</p>
+				</section>
+				<section id="tab-2-content" class="hidden">
+					<!-- content for tab 2 -->
+					<h2>Tab 2 Content</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+						amet nulla auctor, vestibulum magna sed, convallis ex.
+					</p>
+				</section>
+				<section id="tab-3-content" class="hidden">
+					<!-- content for tab 3 -->
+					<h2>Tab 3 Content</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+						amet nulla auctor, vestibulum magna sed, convallis ex.
+					</p>
+				</section>
+			</main>
+			<nav
+				class="fixed bottom-0 left-0 right-0 bg-zinc-900 border border-gray-200 p-3 m-3 rounded-[1rem]"
+			>
+				<div class="text-white" id="tab-2-item">
+					<div class="space-y-2">
+						<div
+							class="bg-orange-500 w-full p-5 rounded-lg flex items-center justify-between text-2xl font-extrabold"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="32px"
+								height="32px"
+								viewBox="0 0 256 256"
+							>
+								<path
+									fill="currentColor"
+									d="m232.94 163.06l-28.62-14.31A43.78 43.78 0 0 1 180 109.39V80a12 12 0 0 0-12-12a44.05 44.05 0 0 1-44-44a12 12 0 0 0-19.25-9.56l-77 58.41l-.3.23a20 20 0 0 0-1.56 29.69l113.68 113.72a12 12 0 0 0 8.49 3.51H224a20 20 0 0 0 20-20v-19.06a19.88 19.88 0 0 0-11.06-17.88M220 196h-67L46.08 89.05l12.86-9.76l41.2 41.2a12 12 0 0 0 17-17L78.25 64.65l25.24-19.14A68.24 68.24 0 0 0 156 90.94v18.45a67.62 67.62 0 0 0 37.59 60.82L220 183.42ZM55.49 184H32a12 12 0 0 1 0-24h23.49a12 12 0 0 1 0 24m48 24a12 12 0 0 1-12 12H48a12 12 0 0 1 0-24h43.49a12 12 0 0 1 12 12"
+								/>
+							</svg>
+							<span id="steps" class="flex-1 text-center">15000</span>
+						</div>
+						<div class="flex gap-2">
+							<div
+								class="bg-zinc-800 w-full p-5 rounded-lg flex items-center justify-between gap-2 text-mdl font-extrabold"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32px"
+									height="32px"
+									viewBox="0 0 256 256"
+								>
+									<path
+										fill="currentColor"
+										d="M232 204h-15.47L157.2 33.43A20 20 0 0 0 138.31 20h-20.62A20 20 0 0 0 98.8 33.43L39.47 204H24a12 12 0 0 0 0 24h208a12 12 0 0 0 0-24M98.27 108h59.46l13.91 40H84.36Zm22.26-64h14.94l13.91 40h-42.76ZM76 172h104l11.13 32H64.88Z"
+									/>
+								</svg>
+								<span class="flex-1 text-center">10KM</span>
+							</div>
+							<div
+								class="bg-zinc-800 w-full p-5 rounded-lg flex items-center justify-between gap-2 text-mdl font-extrabold"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="32px"
+									height="32px"
+									viewBox="0 0 256 256"
+								>
+									<path
+										fill="currentColor"
+										d="M128 44a96 96 0 1 0 96 96a96.11 96.11 0 0 0-96-96m0 168a72 72 0 1 1 72-72a72.08 72.08 0 0 1-72 72m36.49-112.49a12 12 0 0 1 0 17l-28 28a12 12 0 0 1-17-17l28-28a12 12 0 0 1 17 0M92 16a12 12 0 0 1 12-12h48a12 12 0 0 1 0 24h-48a12 12 0 0 1-12-12"
+									/>
+								</svg>
+								<span id="time" class="flex-1 text-center">1:20:50</span>
+							</div>
+						</div>
+						<button
+							class="w-full bg-green-600 p-1 text-white rounded-md"
+							type="button"
+						>
+							Start
+						</button>
+					</div>
+				</div>
+				<div class="flex justify-around">
+					<button
+						class="text-white border-none py-2 px-4 text-lg cursor-pointer"
+						data-tab="tab-1"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="32px"
+							height="32px"
+							viewBox="0 0 256 256"
+						>
+							<path
+								fill="currentColor"
+								d="M241.47 30.53a36 36 0 0 0-50.92 0a36.06 36.06 0 0 0-1.2 49.66l-23.83 44.26a36.1 36.1 0 0 0-21 3.07l-16-16a36 36 0 0 0-57.94-41a36 36 0 0 0-1.2 49.66L45.5 164.45a36 36 0 0 0-31 10.1a36 36 0 1 0 52.12 1.26l23.83-44.26A35 35 0 0 0 96 132a36.1 36.1 0 0 0 15.51-3.5l16 16a36 36 0 1 0 59.14-8.68l23.85-44.27a36 36 0 0 0 5.5.45a36 36 0 0 0 25.46-61.45Zm-154 57a12 12 0 0 1 17 17a12 12 0 0 1-17-17m-39 121a12 12 0 1 1 0-17a12 12 0 0 1 0 16.97Zm120-40a12 12 0 1 1 0-17a12 12 0 0 1 .02 16.96Zm56-104a12 12 0 1 1 0-17a12 12 0 0 1 .03 16.95Z"
+							/>
+						</svg>
+					</button>
+					<button
+						class="text-white border-none py-2 px-4 text-lg cursor-pointer"
+						data-tab="tab-2"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="32px"
+							height="32px"
+							viewBox="0 0 256 256"
+						>
+							<path
+								fill="currentColor"
+								d="M152 92a36 36 0 1 0-36-36a36 36 0 0 0 36 36m0-48a12 12 0 1 1-12 12a12 12 0 0 1 12-12m76 93.4a12 12 0 0 1-7 10.91a66 66 0 0 1-21.47 3.78c-14 0-34.25-3.82-59.77-19a177 177 0 0 1-10.27 21C153.12 162.83 188 183.8 188 232a12 12 0 0 1-24 0c0-18.69-6.95-33.06-21.26-43.94c-9.16-7-19.55-11-27.43-13.34c-.81 1-1.64 2-2.5 2.95c-20 22.87-44.82 34.76-72.25 34.76a97 97 0 0 1-9.75-.49a12 12 0 1 1 2.39-23.88c52.3 5.22 77.48-45.92 85.79-67.75c-34.19-17.85-55.25-1.53-55.48-1.31a12 12 0 0 1-15-18.72C50.08 99 88 69.44 142.75 106.62c43.1 29.31 68.1 19.92 68.5 19.76a12 12 0 0 1 16.75 11Z"
+							/>
+						</svg>
+					</button>
+					<button
+						class="text-white border-none py-2 px-4 text-lg cursor-pointer"
+						data-tab="tab-3"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="32px"
+							height="32px"
+							viewBox="0 0 256 256"
+						>
+							<path
+								fill="currentColor"
+								d="M128 20a108 108 0 1 0 108 108A108.12 108.12 0 0 0 128 20M79.57 196.57a60 60 0 0 1 96.86 0a83.72 83.72 0 0 1-96.86 0M100 120a28 28 0 1 1 28 28a28 28 0 0 1-28-28m94 59.94a83.5 83.5 0 0 0-29-23.42a52 52 0 1 0-74 0a83.5 83.5 0 0 0-29 23.42a84 84 0 1 1 131.9 0Z"
+							/>
+						</svg>
+					</button>
+				</div>
+			</nav>
+		</div>
+		<!-- partials -->
+		<script src="script.js"></script>
+	</body>
 </html>

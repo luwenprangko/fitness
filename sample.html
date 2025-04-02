@@ -1,52 +1,6 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla HTML Components</title>
-  </head>
-  <body>
-    <header-component></header-component>
-    <main>
-      <p>Welcome to my page!</p>
-    </main>
-    <footer-component></footer-component>
-
-    <template id="header-template">
-      <header>
-        <h1>My Website</h1>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </nav>
-      </header>
-    </template>
-
-    <template id="footer-template">
-      <footer>
-        <p>© 2025 My Website</p>
-      </footer>
-    </template>
-
-    <script>
-      function loadComponent(tagName, templateId) {
-        customElements.define(
-          tagName,
-          class extends HTMLElement {
-            constructor() {
-              super();
-              let template = document.getElementById(templateId);
-              let content = template.content.cloneNode(true);
-              this.appendChild(content);
-            }
-          }
-        );
-      }
-
-      loadComponent("header-component", "header-template");
-      loadComponent("footer-component", "footer-template");
-    </script>
-  </body>
-</html>
+<header
+	class="fixed top-0 left-0 right-0 bg-zinc-900 border border-gray-200 p-3 m-3 rounded-[1rem] text-white"
+	id="header"
+>
+	<div class="flex justify-around">Hello World</div>
+</header>
