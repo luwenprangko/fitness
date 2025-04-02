@@ -1,27 +1,27 @@
 /* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 button[data-tab] {
-  position: relative;
+	position: relative;
 }
 
 button[data-tab].active::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 25px;
-  height: 5px;
-  border-radius: 1rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 25px;
+	height: 5px;
+	border-radius: 1rem;
+	--tw-bg-opacity: 1;
+	background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
 }
