@@ -22,4 +22,4 @@ tabs.forEach((tab) => {
 });
 
 // Set default active tab
-tabs[1].click();
+tabs[0].click();

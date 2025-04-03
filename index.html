@@ -11,15 +11,18 @@
 		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	</head>
 	<body>
-		<div class="h-screen">
+		<div class="h-screen bg-orange-100">
 			<main class="overflow-y-auto pb-[90px]">
 				<section id="tab-1-content" class="hidden">
 					<!-- content for tab 1 -->
-					<h2>Tab 1 Content</h2>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-						amet nulla auctor, vestibulum magna sed, convallis ex.
-					</p>
+					<div class="space-y-3.5">
+						<div
+							class="bg-orange-500 h-[40vh] rounded-bl-4xl rounded-br-4xl shadow-md"
+						></div>
+						<div
+							class="bg-white h-[15vh] mx-3 rounded-xl border border-zinc-300"
+						></div>
+					</div>
 				</section>
 				<section id="tab-2-content" class="hidden">
 					<!-- content for tab 2 -->
@@ -31,12 +34,12 @@
 				</section>
 			</main>
 			<nav
-				class="fixed bottom-0 left-0 right-0 bg-zinc-900 border border-gray-200 p-3 m-3 rounded-xl"
+				class="fixed bottom-0 left-0 right-0 bg-zinc-900 border border-gray-200 shadow-md p-3 m-3 rounded-4xl"
 			>
-				<div class="text-white" id="tab-2-item">
+				<div class="text-white mb-3" id="tab-2-item">
 					<div class="space-y-2">
 						<div
-							class="bg-orange-500 p-4 rounded-lg flex items-center justify-between text-lg font-bold"
+							class="bg-orange-500 p-4 rounded-ss-3xl rounded-se-3xl rounded-bl-lg rounded-br-lg flex items-center justify-between text-lg font-bold"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
