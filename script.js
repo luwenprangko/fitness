@@ -22,13 +22,13 @@ tabs.forEach((tab) => {
 });
 
 // Set default active tabs
-tabs[0].click();
+tabs[1].click();
 
 var map = new maplibregl.Map({
 	container: "map",
 	style: "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json", // stylesheet location
 	center: [-74.5, 40], // starting position [lng, lat]
-	zoom: 3, // starting zoom
+	minZoom: 1.7, // starting zoom
 	attributionControl: false, // disables the attribution
 });
 
@@ -64,9 +64,9 @@ map.on("load", () => {
 	}
 });
 
-// map.on("style.load", () => {
-// 	// Set projection to globe
-// 	map.setProjection({
-// 		type: "globe",
-// 	});
-// });
+map.on("style.load", () => {
+	// Set projection to globe
+	map.setProjection({
+		type: "globe",
+	});
+});
