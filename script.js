@@ -55,7 +55,7 @@ map.on("load", () => {
 				const userLng = position.coords.longitude;
 				const userLat = position.coords.latitude;
 				map.setCenter([userLng, userLat]);
-				map.setZoom(12);
+				map.setZoom(10);
 			},
 			function (error) {
 				console.warn("Geolocation failed or denied:", error.message);
