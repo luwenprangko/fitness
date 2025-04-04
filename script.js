@@ -21,7 +21,7 @@ tabs.forEach((tab) => {
 	});
 });
 
-// Set default active tab
+// Set default active tabs
 tabs[0].click();
 
 var map = new maplibregl.Map({
