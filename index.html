@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="theme-color" content="#2973B2" />
 		<title>Document</title>
 		<!-- tailwind -->
 		<link rel="stylesheet" href="styles.css" />
@@ -11,17 +13,65 @@
 		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	</head>
 	<body>
-		<div class="h-screen bg-orange-100">
+		<div class="h-screen bg-[#F2EFE7]">
 			<main class="overflow-y-auto pb-[90px]">
 				<section id="tab-1-content" class="hidden">
 					<!-- content for tab 1 -->
 					<div class="space-y-3.5">
 						<div
-							class="bg-orange-500 h-[40vh] rounded-bl-4xl rounded-br-4xl shadow-md"
-						></div>
-						<div
-							class="bg-white h-[15vh] mx-3 rounded-xl border border-zinc-300"
-						></div>
+							class="w-full bg-[#2973B2] text-white p-8 rounded-b-3xl shadow-lg flex flex-col items-center"
+						>
+							<div
+								class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg"
+							>
+								<span class="text-4xl font-bold text-[#2973B2]">J</span>
+							</div>
+							<h2 class="mt-4 text-4xl font-bold">Hello, Jack</h2>
+							<p class="text-md opacity-90">Track Your Progress</p>
+							<div class="flex justify-between w-full mt-6 text-sm">
+								<p>Weight: <span class="font-bold">79.5kg</span></p>
+								<p>Body Fat: <span class="font-bold">35%</span></p>
+								<p>Height: <span class="font-bold">175cm</span></p>
+							</div>
+						</div>
+						<div class="mx-3 space-y-3.5">
+							<div class="bg-[#48A6A7] text-white p-6 rounded-xl shadow-lg">
+								<h3 class="text-xl font-semibold">Running Challenge</h3>
+								<div class="flex justify-between text-md mt-4">
+									<p>Distance: <span class="font-bold">15.8 km</span></p>
+									<p>Calories: <span class="font-bold">150 kcal</span></p>
+								</div>
+								<button
+									class="mt-4 w-full text-[#48A6A7] bg-white py-3 rounded-lg text-lg font-semibold shadow-md transition"
+								>
+									Go to
+								</button>
+							</div>
+							<div class="grid grid-cols-2 gap-3.5">
+								<div class="bg-[#9ACBD0] text-white p-6 rounded-xl shadow-lg">
+									<h3 class="text-xl font-semibold">Running Challenge</h3>
+									<div class="flex justify-between text-md mt-4">
+										<p>Distance: <span class="font-bold">15.8 km</span></p>
+									</div>
+									<button
+										class="mt-4 w-full text-blue-500 bg-white py-3 rounded-lg text-lg font-semibold shadow-md transition"
+									>
+										Go to
+									</button>
+								</div>
+								<div class="bg-[#9ACBD0] text-white p-6 rounded-xl shadow-lg">
+									<h3 class="text-xl font-semibold">Running Challenge</h3>
+									<div class="flex justify-between text-md mt-4">
+										<p>Distance: <span class="font-bold">15.8 km</span></p>
+									</div>
+									<button
+										class="mt-4 w-full text-blue-500 bg-white py-3 rounded-lg text-lg font-semibold shadow-md transition"
+									>
+										Go to
+									</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 				<section id="tab-2-content" class="hidden">
@@ -39,7 +89,7 @@
 				<div class="text-white mb-3" id="tab-2-item">
 					<div class="space-y-2">
 						<div
-							class="bg-orange-500 p-4 rounded-ss-3xl rounded-se-3xl rounded-bl-lg rounded-br-lg flex items-center justify-between text-lg font-bold"
+							class="bg-[#2973B2] p-4 rounded-ss-3xl rounded-se-3xl rounded-bl-lg rounded-br-lg flex items-center justify-between text-lg font-bold"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +136,7 @@
 							</div>
 						</div>
 						<button
-							class="font-extrabold text-sm w-full bg-green-600 p-2 text-white rounded-md inline-flex items-center justify-center gap-2"
+							class="font-medium text-sm w-full bg-[#48a6a7] p-2 text-white rounded-md inline-flex items-center justify-center gap-2"
 						>
 							Start!
 							<svg
@@ -132,6 +182,5 @@
 		</div>
 		<!-- partials -->
 		<script src="script.js"></script>
-		<script src="component.js"></script>
 	</body>
 </html>

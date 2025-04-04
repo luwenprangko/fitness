@@ -23,5 +23,5 @@ button[data-tab].active::before {
 	height: 5px;
 	border-radius: 1rem;
 	--tw-bg-opacity: 1;
-	background-color: rgb(249 115 22 / var(--tw-bg-opacity, 1));
+	background-color: #48a6a7;
 }
